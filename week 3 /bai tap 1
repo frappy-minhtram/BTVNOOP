@@ -1,10 +1,19 @@
+CÁCH 1 
 class Point:
     x = int
     y = int
-    
-    def print_point(self):
-        print('(%d,%d)'%(self.x,self.y))
+def print_point(self):
+        print('(%d,%d)'%(self.x,self.y))      #chỗ chèn int (3,4)
 A = Point()
 A.x = 3
 A.y = 4
 A.print_point()
+
+CÁCH 2 
+class Point:
+    def __str__(self): 
+        return f"({self.x}, {self.y})"
+A = Point()
+A.x = 3 
+A.y = 4
+print(A)
